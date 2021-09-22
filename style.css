@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./images/Untitled.svg");
+  background-size: cover;
+  background-position: top;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 200px 150px 100px 150px;
+  grid-template-columns: 350px;
+  grid-template-areas: "image" "description" "plan" "checkout";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 20px;
+  /*   box-shadow: 4px 6px 7px 4px rgba(0, 0, 0, 0.2);
+ */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  overflow: hidden;
+}
+
+.image {
+  grid-area: "image";
+  background-image: url("./images/illustration-hero.svg");
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.orderSummary {
+  color: hsl(224, 23%, 55%);
+  margin-top: 1rem;
+  grid-area: "description";
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.productPlan {
+  grid-area: "plan";
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+h2 {
+  color: hsl(223, 47%, 23%);
+}
+
+span {
+  font-weight: bold;
+  color: hsl(223, 47%, 23%);
+}
+
+.changebtn {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: hsl(245, 75%, 52%);
+  border: none;
+  background: none;
+  margin-left: 5rem;
+  margin-right: 1rem;
+}
+
+.changebtn:hover {
+  cursor: pointer;
+}
+.checkout {
+  grid-area: "checkout";
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.proceedBtn,
+.cancelBtn {
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 16px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: hsl(224, 23%, 55%);
+  transition: 0.3s ease-in-out;
+}
+
+.cancelBtn {
+  margin-top: 1.5rem;
+}
+
+.proceedBtn:hover {
+  color: white;
+  cursor: pointer;
+  background-color: hsl(223, 47%, 23%);
+  font-size: 18px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.cancelBtn:hover {
+  color: white;
+  cursor: pointer;
+  background-color: hsl(223, 47%, 23%);
+  font-size: 18px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  margin-top: 3rem;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
